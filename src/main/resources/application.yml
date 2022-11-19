@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/jpashop
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+#        show_sql: true # system out으로 sql을 보여주는 옵션. 자바에서 System이라는 표준 입출력 클래스를 정의하여 제공하고 있다. out으로 출력 가능.
+        format_sql: true
+
+logging:
+  level:
+    org.hibernate.SQL: debug # logger를 통해서 sql을 출력함
+    org.hibernate.type: trace
